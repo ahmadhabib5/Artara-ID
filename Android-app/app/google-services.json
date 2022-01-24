@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "488621849001",
+    "project_id": "artara-6c75a",
+    "storage_bucket": "artara-6c75a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488621849001:android:c52aad4fb8c101e50b2cb8",
+        "android_client_info": {
+          "package_name": "com.example.artara_id"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488621849001-h7kf7u5s45m1oo8ig27invdc43q6bgmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.artara_id",
+            "certificate_hash": "067af8beb57e725e7aa6588374c28b8f4df7fa06"
+          }
+        },
+        {
+          "client_id": "488621849001-2jqr68mcag14ubb53kc8c3d8shlqvslu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn258wolDy4hXu9oAHRI9QIe9jkznP72w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488621849001-2jqr68mcag14ubb53kc8c3d8shlqvslu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

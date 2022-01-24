@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:columnOrderPreserved="false"
+        android:rowCount="4"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/bg_view_2">
+
+        <TextView
+            android:id="@+id/TV_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/code_predict"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:layout_gravity="center"
+            android:layout_row="0"
+            android:layout_marginTop="20dp"
+            style="@style/text.bold"
+            android:textSize="18sp"
+            android:textColor="@color/white_primary"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_marginBottom="20dp"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="3">
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_view_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/IV_photo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view7"
+                app:layout_constraintEnd_toEndOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="@+id/view7"
+                app:layout_constraintTop_toTopOf="@+id/view7"
+                tools:src="@tools:sample/avatars"
+                android:contentDescription="@string/cake_pict" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_cake"
+            style="@style/MyBtn2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:layout_gravity="fill"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_columnWeight="1"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_cake"
+                android:contentDescription="@string/ic_cake" />
+
+            <TextView
+                android:id="@+id/TV_cake_name"
+                style="@style/text.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contoh_nama"
+                android:gravity="center"
+                android:textColor="@color/white_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_score"
+            style="@style/MyBtn.open"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_score"
+                android:contentDescription="@string/ic_score" />
+
+            <TextView
+                android:id="@+id/TV_score"
+                style="@style/text.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contoh_score"
+                android:gravity="center"
+                android:textColor="@color/white_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_predict_again"
+            style="@style/MyBtn.open"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/predict"
+                android:contentDescription="@string/ic_predict" />
+
+            <TextView
+                style="@style/text.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/predict_again"
+                android:gravity="center"
+                android:textColor="@color/white_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_tutorial"
+            style="@style/MyBtn.open"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_columnWeight="1"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/youtube"
+                android:contentDescription="@string/id_youtube" />
+
+            <TextView
+                style="@style/text.bold"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tutorial"
+                android:textColor="@color/white_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_detail"
+            style="@style/MyBtn.open"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_detail"
+                android:contentDescription="@string/ic_detail" />
+
+            <TextView
+                style="@style/text.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient"
+                android:gravity="center"
+                android:textColor="@color/white_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_delete"
+            style="@style/MyBtn.open"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:layout_columnWeight="1"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/trash"
+                android:contentDescription="@string/ic_delete" />
+
+            <TextView
+                style="@style/text.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:gravity="center"
+                android:textColor="@color/white_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </GridLayout>
+
+
+
+
+</LinearLayout>

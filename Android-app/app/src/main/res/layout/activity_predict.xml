@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_4"
+    tools:context=".feature.predict.PredictActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_bg"/>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:elevation="0dp">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/transparent_bg"
+            app:expandedTitleTextAppearance="@style/TransparentText"
+            app:layout_scrollFlags="noScroll">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="30dp"
+                app:layout_collapseMode="parallax">
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:background="@drawable/bg_view_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="70dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/IV_foto"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view4"
+                    app:layout_constraintEnd_toEndOf="@+id/view4"
+                    app:layout_constraintStart_toStartOf="@+id/view4"
+                    app:layout_constraintTop_toTopOf="@+id/view4"
+                    tools:src="@tools:sample/avatars"
+                    android:contentDescription="@string/imageview1" />
+
+                <ImageButton
+                    android:id="@+id/btn_trash_upload"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/trash_selector"
+                    app:layout_constraintBottom_toBottomOf="@+id/view4"
+                    app:layout_constraintEnd_toEndOf="@+id/view4"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/IV_foto"
+                    android:contentDescription="@string/btn_trash_upload" />
+
+                <LinearLayout
+                    android:id="@+id/LR_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_view_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view4">
+                    <TextView
+                        android:id="@+id/TV_result"
+                        style="@style/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white_primary"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:columnCount="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LR_result">
+
+                    <LinearLayout
+                        android:id="@+id/btn_predict"
+                        style="@style/MyBtn.predict"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:layout_columnWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/predict"
+                            android:contentDescription="@string/logo_predict" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text.bold"
+                            android:textColor="@color/white_primary"
+                            android:textSize="16sp"
+                            android:text="@string/prediction"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_save"
+                        style="@style/MyBtn.save"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:layout_column="1"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_baseline_save_24"
+                            android:contentDescription="@string/logo_save" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text.bold"
+                            android:textColor="@color/white_primary"
+                            android:textSize="16sp"
+                            android:text="@string/save"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_open"
+                        style="@style/MyBtn.open"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_column="2"
+                        android:layout_margin="5dp"
+                        android:layout_columnWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/youtube"
+                            android:contentDescription="@string/logo_youtube" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text.bold"
+                            android:textColor="@color/white_primary"
+                            android:textSize="16sp"
+                            android:text="@string/tutorial"/>
+                    </LinearLayout>
+
+                </GridLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LR_resep"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_member_2"
+        android:paddingTop="20dp"
+        android:paddingBottom="40dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ingredient"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white_primary"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_resep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            tools:listitem="@layout/resep_layout"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
