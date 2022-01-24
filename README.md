@@ -66,5 +66,5 @@ Artara merupakan aplikasi pengenalan jenis kue nusantara dengan menggunakan tekn
 
 [Farhan Ramadhan](#) -  ramadanfar2@gmail.com
 
-annisarizkiii24@gmail.com - annisarizkiii24@gmail.com
+[Annisa Rizki Ayuslina](#)  - annisarizkiii24@gmail.com
 
